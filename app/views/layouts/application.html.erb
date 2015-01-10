@@ -11,24 +11,6 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-  <div class="contain-to-grid sticky">
-    <nav class="top-bar" data-topbar>
-    <ul class="title-area">
-      <li class="name">
-        <h1><%= link_to "Owen's BLOOOOOOOOG!!!1", posts_path %></h1>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-    <ul class="left"> 
-      <li class="divider"></li>
-      <li><%= link_to "NEW POST", new_post_path%></li>
-      <li class="divider"></li>
-    </ul>
-    </section>
-
-  </nav>
-  </div>
 
 
     <%= yield %>
