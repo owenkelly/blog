@@ -20,12 +20,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    if @post.save
-      redirect_to @post.root, notice: "Post Created!"
-    else
-      render :new
-    end 
+    @post = Post.create(post_params)
+    respond_to do |format|
+      format.html {redirect_to @post}
+      format.js
+    end
   end
 
   def new

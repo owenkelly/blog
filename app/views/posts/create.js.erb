@@ -1,0 +1,3 @@
+$('#<%= j "post_#{@post.parent.id}" %>').after("<%= j render "post", post: @post %>");
+$('#<%= j "post_#{@post.id}" %>').css("margin-left", "30px");
+$('#<%= j "form_reply_#{@post.parent.id}"%>').remove();

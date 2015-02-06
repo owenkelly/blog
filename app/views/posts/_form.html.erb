@@ -1,9 +1,11 @@
-<%= form_for(@post, inline: true) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-  <%= f.hidden_field :parent_id %>
+<div id=<%="form_reply_#{@post.parent.id}"%>>
+  <%= form_for(@post, remote: true) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.hidden_field :parent_id %>
 
-  <%= f.submit "submit", class: "button radius" %>
-<% end %>
+    <%= f.submit "submit", class: "button radius" %>
+  <% end %>
+</div>

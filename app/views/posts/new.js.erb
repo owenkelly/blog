@@ -1,0 +1,8 @@
+$('#reply<%= j "#{@post.parent.id}"%>').after(function(){
+  if ($('#<%= j "form_reply_#{@post.parent.id}"%>').length ) {
+    $('#<%= j "form_reply_#{@post.parent.id}"%>').toggle();
+  } else {
+    $('#reply<%= j "#{@post.parent.id}"%>').after("<%= j render "form" %>");
+  }
+});
+
